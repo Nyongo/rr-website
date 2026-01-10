@@ -1,0 +1,52 @@
+---
+const navItems = [
+  { name: 'Features', href: '#features' },
+  { name: 'Solutions', href: '#solutions' },
+  { name: 'About', href: '#about' },
+  { name: 'Contact', href: '#contact' },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+  <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <div class="flex items-center space-x-2">
+        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-xl">R</span>
+        </div>
+        <span class="text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          RocketRoll
+        </span>
+      </div>
+      
+      <div class="hidden md:flex items-center space-x-8">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+          >
+            {item.name}
+          </a>
+        ))}
+      </div>
+
+      <div class="flex items-center space-x-4">
+        <a
+          href="#contact"
+          class="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+        >
+          Get Started
+        </a>
+        <button
+          type="button"
+          class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100"
+          aria-label="Toggle menu"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>

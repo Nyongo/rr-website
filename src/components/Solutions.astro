@@ -1,0 +1,65 @@
+---
+const solutions = [
+  {
+    title: 'For Schools',
+    description: 'Complete transportation management system tailored for educational institutions of all sizes.',
+    features: ['Student roster management', 'Route planning & optimization', 'Driver & minder assignment', 'Real-time GPS tracking'],
+    icon: '🏫',
+    color: 'from-blue-500 to-blue-600',
+  },
+  {
+    title: 'For Parents',
+    description: 'Stay connected with your child\'s transportation journey with real-time updates and notifications.',
+    features: ['Live bus tracking', 'Pickup & dropoff alerts', 'Route information', 'Emergency notifications'],
+    icon: '👨‍👩‍👧‍👦',
+    color: 'from-purple-500 to-purple-600',
+  },
+  {
+    title: 'For Administrators',
+    description: 'Powerful analytics and reporting tools to optimize operations and ensure student safety.',
+    features: ['Comprehensive dashboards', 'Performance analytics', 'Custom reports', 'Integration APIs'],
+    icon: '📊',
+    color: 'from-pink-500 to-pink-600',
+  },
+];
+---
+
+<section id="solutions" class="py-20 sm:py-24 lg:py-32 bg-gradient-to-br from-gray-50 to-blue-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        Solutions for
+        <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Everyone</span>
+      </h2>
+      <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+        Tailored solutions that meet the unique needs of schools, parents, and administrators.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+      {solutions.map((solution) => (
+        <div class="group bg-white rounded-2xl p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
+          <div class={`w-16 h-16 rounded-xl bg-gradient-to-br ${solution.color} flex items-center justify-center text-3xl mb-6 transform group-hover:scale-110 transition-transform duration-300`}>
+            {solution.icon}
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">
+            {solution.title}
+          </h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            {solution.description}
+          </p>
+          <ul class="space-y-3">
+            {solution.features.map((feature) => (
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700">{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

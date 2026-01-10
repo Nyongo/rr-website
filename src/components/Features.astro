@@ -1,0 +1,74 @@
+---
+const features = [
+  {
+    icon: '🚌',
+    title: 'Fleet Management',
+    description: 'Complete control over your bus fleet with real-time status, maintenance tracking, and route optimization.',
+  },
+  {
+    icon: '📍',
+    title: 'Real-Time Tracking',
+    description: 'GPS-enabled tracking system that allows parents and administrators to monitor bus locations in real-time.',
+  },
+  {
+    icon: '👥',
+    title: 'Student Management',
+    description: 'Comprehensive student database with attendance tracking, RFID integration, and parent notifications.',
+  },
+  {
+    icon: '🛣️',
+    title: 'Route Optimization',
+    description: 'AI-powered route planning that minimizes travel time and maximizes efficiency for multiple pickup points.',
+  },
+  {
+    icon: '📱',
+    title: 'Mobile App',
+    description: 'Dedicated mobile applications for drivers, minders, and parents with intuitive interfaces and offline support.',
+  },
+  {
+    icon: '🔔',
+    title: 'Smart Notifications',
+    description: 'Automated SMS and push notifications for delays, arrivals, departures, and important announcements.',
+  },
+  {
+    icon: '📊',
+    title: 'Analytics Dashboard',
+    description: 'Powerful analytics and reporting tools to track performance, optimize operations, and generate insights.',
+  },
+  {
+    icon: '🔒',
+    title: 'Secure & Compliant',
+    description: 'Enterprise-grade security with data encryption, GDPR compliance, and regular security audits.',
+  },
+];
+---
+
+<section id="features" class="py-20 sm:py-24 lg:py-32 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        Powerful Features for
+        <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Modern Schools</span>
+      </h2>
+      <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+        Everything you need to manage your school transportation efficiently and safely.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+      {features.map((feature) => (
+        <div class="group p-6 lg:p-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="text-4xl lg:text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+            {feature.icon}
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">
+            {feature.title}
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            {feature.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
