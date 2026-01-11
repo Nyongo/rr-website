@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#9333ea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#db2777;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle (optional, can be removed for transparent) -->
+  <circle cx="50" cy="50" r="45" fill="url(#iconGrad)" opacity="0.1"/>
+  
+  <!-- Rocket body -->
+  <path d="M50 15 L60 55 L40 55 Z" fill="url(#iconGrad)"/>
+  
+  <!-- Rocket main body -->
+  <rect x="45" y="55" width="10" height="35" rx="5" fill="url(#iconGrad)"/>
+  
+  <!-- Rocket fins -->
+  <path d="M45 80 L32 95 L45 100 Z" fill="url(#iconGrad)" opacity="0.8"/>
+  <path d="M55 80 L68 95 L55 100 Z" fill="url(#iconGrad)" opacity="0.8"/>
+  
+  <!-- Academic cap element -->
+  <ellipse cx="50" cy="60" rx="7" ry="3.5" fill="#fff" opacity="0.9"/>
+  
+  <!-- Window -->
+  <circle cx="50" cy="70" r="3.5" fill="#fff" opacity="0.9"/>
+  
+  <!-- Motion lines -->
+  <path d="M20 45 L30 40 M20 60 L28 58 M20 75 L30 78" stroke="url(#iconGrad)" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+  <path d="M80 45 L70 40 M80 60 L72 58 M80 75 L70 78" stroke="url(#iconGrad)" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+</svg>

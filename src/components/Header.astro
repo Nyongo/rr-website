@@ -10,13 +10,22 @@ const navItems = [
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
   <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 lg:h-20">
-      <div class="flex items-center space-x-2">
-        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-          <span class="text-white font-bold text-xl">R</span>
-        </div>
-        <span class="text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          RocketRoll
-        </span>
+      <div class="flex items-center space-x-3">
+        <a href="/" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+          <img 
+            src="/logo-icon.svg" 
+            alt="RocketRoll Logo" 
+            class="w-10 h-10"
+          />
+          <div class="flex flex-col">
+            <span class="text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight">
+              RocketRoll
+            </span>
+            <span class="text-xs lg:text-sm font-medium text-gray-500 leading-tight">
+              Academic Suite
+            </span>
+          </div>
+        </a>
       </div>
       
       <div class="hidden md:flex items-center space-x-8">
